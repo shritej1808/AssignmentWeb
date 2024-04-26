@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply for Mentorship</title>
+  </head>
+  <body>
+    <header>
+      <img
+        src="collge_logo.png"
+        alt="SDM College of Engineering and Technology"
+      />
+      <h1>SDM College of Engineering and Technology</h1>
+    </header>
+
+    <section>
+      <h2>Mentorship Application Form</h2>
+      <form method="post">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required /><br /><br />
+
+        <label for="usn">USN:</label><br />
+        <input type="text" id="usn" name="usn" required /><br /><br />
+
+        <label for="year">Year:</label><br />
+        <input type="text" id="year" name="year" required /><br /><br />
+
+        <label for="parent_name">Parent Name:</label><br />
+        <input
+          type="text"
+          id="parent_name"
+          name="parent_name"
+          required
+        /><br /><br />
+
+        <label for="mobile">Mobile Number:</label><br />
+        <input type="text" id="mobile" name="mobile" required /><br /><br />
+
+        <label for="hobbies">Hobbies:</label><br />
+        <textarea id="hobbies" name="hobbies" required></textarea><br /><br />
+        <label for="semester">Semester:</label><br />
+        <select>
+          <option>--Select Sem--</option>
+          <option>1st</option>
+          <option>2nd</option>
+          <option>3rd</option>
+          <option>4th</option>
+          <option>5th</option>
+          <option>6th</option>
+          <option>7th</option>
+          <option>8th</option></select
+        ><br /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="gender">Gender:</label><br />
+        <input type="radio" id="male" name="gender" value="male" required />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" required />
+        <label for="female">Female</label><br /><br />
+
+        <input type="submit" value="Submit" />
+      </form>
+    </section>
+  </body>
+</html>

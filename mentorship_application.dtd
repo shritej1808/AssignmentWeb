@@ -1,0 +1,10 @@
+<!ELEMENT mentorship_application (name, usn, year, parent_name, mobile, hobbies, semester, email, gender)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT usn (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT parent_name (#PCDATA)>
+<!ELEMENT mobile (#PCDATA)>
+<!ELEMENT hobbies (#PCDATA)>
+<!ELEMENT semester (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT gender (#PCDATA)>

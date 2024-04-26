@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mentorship_application SYSTEM "mentorship_application.dtd">
+<mentorship_application>
+    <name></name>
+    <usn></usn>
+    <year></year>
+    <parent_name></parent_name>
+    <mobile></mobile>
+    <hobbies></hobbies>
+    <semester></semester>
+    <email></email>
+    <gender></gender>
+</mentorship_application>
