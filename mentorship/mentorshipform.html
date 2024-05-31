@@ -1,168 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> MENTORSHIP FORM </title>
-</head>
-<body>
-    <form > <fieldset>
-        <legend>MENTORSHIP FORM </legend>
-        <div align="center" ><img src="C:\Users\TVA6\OneDrive\Desktop\top.png" height="300" width="1500"></div>
-        <hr color="black">
-       <table><tr>
-        <td><label for="nametxt">NAME</label></td>
-            <td><input type="text" class="nametxt" id="name" placeholder="ENTER STUDENT NAME HERE " size="30"></td>
-       
-        </tr>
-            <td><label for="">USN </label></td>
-            <td><input type="text" class="usnno" id="usnno" placeholder=" IN BOLD LETTERS " SIZE="20"></td>
-        
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mentorship Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      fieldset {
+        width: 50%;
+        margin: auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      td,
+      th {
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+      #submit-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      #submit-btn:hover {
+        background-color: #45a049;
+      }
+      .center {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Mentorship Form</legend>
+        <div class="center">
+          <img
+            src="C:\Users\TVA6\OneDrive\Desktop\top.png"
+            height="300"
+            width="1500"
+            alt="Top Image"
+          />
+        </div>
+        <hr color="black" />
+        <table>
+          <tr>
+            <td><label for="name">Name</label></td>
+            <td>
+              <input
+                type="text"
+                id="name"
+                placeholder="Enter student name here"
+                size="30"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="usnno">USN</label></td>
+            <td>
+              <input
+                type="text"
+                id="usnno"
+                placeholder="In bold letters"
+                size="20"
+                pattern="[A-Za-z0-9]{10}"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="sem">Semester</label></td>
+            <td>
+              <select id="sem">
+                <option value="0">--Select Semester--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="yearr">Year</label></td>
+            <td>
+              <select id="yearr">
+                <option value="0">--Select Year--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="num">Student Mobile</label></td>
+            <td>
+              <input
+                type="text"
+                id="num"
+                placeholder="Mobile number"
+                pattern="[0-9]{10}"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="paren">Parent Name</label></td>
+            <td><input type="text" id="paren" placeholder="Name" /></td>
+          </tr>
+          <tr>
+            <td><label for="parenNUM">Parent Mobile</label></td>
+            <td>
+              <input
+                type="text"
+                id="parenNUM"
+                placeholder="Number"
+                pattern="[0-9]{10}"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="hobby">Hobby</label></td>
+            <td>
+              <textarea
+                id="hobby"
+                placeholder="Enter your text here"
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="mailid">Student Email</label></td>
+            <td><input type="email" id="mailid" /></td>
+          </tr>
+          <tr>
+            <td><label for="gender">Gender</label></td>
+            <td>
+              <label for="male">Male</label>
+              <input type="radio" name="gender" id="male" value="male" />
+              <label for="female">Female</label>
+              <input type="radio" name="gender" id="female" value="female" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="center">
+              <input
+                type="button"
+                id="submit-btn"
+                value="Submit"
+                onclick="validateForm()"
+              />
+            </td>
+          </tr>
+        </table>
+        <div id="result" class="center"></div>
+      </fieldset>
+    </form>
 
-    </tr>
-    <div>
-        <tr>
-             <div> 
-                <td><label>SEM</label></td>
-                <td><select name="sem">
-                    <option value="0">--SELECT SEM--</option>
-                    <option  value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                </select></td>
-            </div>
-            </tr>
-            
-            <tr> <td><label>Year</label></td>
-                <td>
-                    <select name="yearr">
-                        <option value="0">--SELECT YEAR--</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4"> 4</option>
-                    </select>
-                </td></tr>
-         
-               
-           
-        
-        <tr>
-            <td><label for="numb">STUDENT MOBILE:</label></td>
-            <td>
-                <input type="number" id="num" class="numb" placeholder="MOB NO ">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label for="parent">PARENT NAME:</label>
-                
-            </td>
-            <td>
-                <input type="text" class="parent" id="paren" placeholder="NAME">
-             </td>
-             </tr>
-             <tr> <td>
-                <label for="parentNUM">PARENT MOBILE:</label>
-            </td>
-            <td>
-                <input type="number" class="parentNUM" id="parenNUM" placeholder="NUMBER">
-             </td></tr>
-                
-               
-                
-            
-           
-            
-        
-        <tr>
-            <td>
-                <label for="HOBBY ">HOBBY:</label>
-                
-            </td>
-            <td>
-              <textarea id="hobby " class="HOBBY" placeholder="ENTER YOUR TEXT HERE">
-                
-              </textarea>
-            </td>
-        </tr>
-        <tr>
-            <span>
-                
-                <td>
-                <label for="mail">STUDENT EMAIL</label>
-                
-            </td>
-            <td>
-                <input type="email" class="mail" id="mailid">
-             </td></span>
-        </tr>
-        <tr>
-            <td><label for="Gender">GENDER:</label></td>
-            <td><label for="male">MALE</label>
-            <input type="radio" name="Gender" id="male" value="male"></td>
-            <td><label for="female">FEMALE</label>
-            <input type="radio" name="Gender" id="female" value="female"></td>
-        </tr>
-        <tr>
-            <div align="center">
-                <td><input type="button" name="batan" id="batan" value="SUBMIT" onclick="validateDoc(this.form)"></td>
-            </div>
-            
-        </tr>
-    </div>
-    </table>
-        <span id="result"></span>
-        
-    </fieldset></form>
-   
-</body>
-<script type="text/javascript">
-function validateDoc(formobj)
-{
-    var name=document.getElementById("name").value;
-    var usn=document.getElementById("usnno").value;
-    var seem=null;
-    var yearrr=null;
-   
-    for(let i=0;i<formobj.sem.length;i++)
-    {
-        if(formobj.sem[i].selected)
-        {
-            seem=formobj.sem[i].text;
+    <script type="text/javascript">
+      function validateForm() {
+        var name = document.getElementById("name").value.trim();
+        var usn = document.getElementById("usnno").value.trim();
+        var sem = document.getElementById("sem").value;
+        var year = document.getElementById("yearr").value;
+        var stuMob = document.getElementById("num").value.trim();
+        var parName = document.getElementById("paren").value.trim();
+        var parenMob = document.getElementById("parenNUM").value.trim();
+        var hobby = document.getElementById("hobby").value.trim();
+        var email = document.getElementById("mailid").value.trim();
+        var genderElems = document.getElementsByName("gender");
+        var gender = null;
+
+        // Using a for loop to check which radio button is selected
+        for (var i = 0; i < genderElems.length; i++) {
+          if (genderElems[i].checked) {
+            gender = genderElems[i].value;
+            break;
+          }
         }
-      
-    }
-    for(let i=0;i<formobj.yearr.length;i++)
-    {
-        if(formobj.yearr[i].selected)
-        {
-            yearrr=formobj.yearr[i].text;
+
+        // Pattern matching and validation logic
+        var usnPattern = /^[A-Za-z0-9]{10}$/;
+        var mobilePattern = /^[0-9]{10}$/;
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!name) {
+          alert("Please enter the student's name.");
+          return false;
         }
-      
-    }
-    var stuMob=document.getElementById("num").value;
-    var parName=document.getElementById("paren").value;
-    var parenMob=document.getElementById("parenNUM").value;  
-    var hobby=document.getElementById("hobby").value;  
-    var email=document.getElementById("mailid").value;  
-   // var gendar=document.getElementsByName("Gender");
-    var chkgen=null;
-
-    for(let i=0;i<formobj.Gender.length;i++){
-        if(formobj.Gender[i].checked)
-        {
-            chkgen=formobj.Gender[i].value;
+        if (!usn || !usn.match(usnPattern)) {
+          alert("Please enter a valid USN (10 alphanumeric characters).");
+          return false;
         }
-    }
-    alert(chkgen);
+        if (sem == "0") {
+          alert("Please select the semester.");
+          return false;
+        }
+        if (year == "0") {
+          alert("Please select the year.");
+          return false;
+        }
+        if (!stuMob || !stuMob.match(mobilePattern)) {
+          alert("Please enter a valid mobile number (10 digits).");
+          return false;
+        }
+        if (!parName) {
+          alert("Please enter the parent's name.");
+          return false;
+        }
+        if (!parenMob || !parenMob.match(mobilePattern)) {
+          alert("Please enter a valid parent's mobile number (10 digits).");
+          return false;
+        }
+        if (!hobby) {
+          alert("Please enter the hobby.");
+          return false;
+        }
+        if (!email || !email.match(emailPattern)) {
+          alert("Please enter a valid email address.");
+          return false;
+        }
+        if (!gender) {
+          alert("Please select the gender.");
+          return false;
+        }
 
-}
-
-</script>
+        // Displaying the results in a table
+        var resultTable = `
+                <table>
+                    <tr><th>Name</th><td>${name}</td></tr>
+                    <tr><th>USN</th><td>${usn}</td></tr>
+                    <tr><th>Semester</th><td>${sem}</td></tr>
+                    <tr><th>Year</th><td>${year}</td></tr>
+                    <tr><th>Student Mobile</th><td>${stuMob}</td></tr>
+                    <tr><th>Parent Name</th><td>${parName}</td></tr>
+                    <tr><th>Parent Mobile</th><td>${parenMob}</td></tr>
+                    <tr><th>Hobby</th><td>${hobby}</td></tr>
+                    <tr><th>Student Email</th><td>${email}</td></tr>
+                    <tr><th>Gender</th><td>${gender}</td></tr>
+                </table>
+            `;
+        document.getElementById("result").innerHTML = resultTable;
+      }
+    </script>
+  </body>
 </html>
